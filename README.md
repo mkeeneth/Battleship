@@ -3,7 +3,7 @@ Battleship
 
 ## About
 
-This is a player vs. computer JavaScript implementation of Battleship.  It has been written completely in native Javascript and uses no other libraries.
+This is a player vs. computer JavaScript implementation of Battleship.  It has been written completely in JavasScript and uses no frameworks or libraries.
 
 It was tested in the recent versions of Chrome, Firefox and Edge.  Internet Explorer is not supported.
 
