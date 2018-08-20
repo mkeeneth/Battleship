@@ -15,17 +15,17 @@ Download, unzip and open index.html.
 
 - All listed ships can be selected and placed.
     - On click display an additional instruction in the status area indicating ship and length.
-    - Clicking the ship again or another ship in the list does nothing until current ship is placed.
-    - if a ship is already placed and clicked again, display a message indicating that.
+    - Clicking the ship again or another ship in the list does nothing until the current ship is placed.
+    - If a ship is already placed and clicked again, display a message indicating that.
 - Once all ships are placed, the target area becomes clickable.
-- On target grid click, the appropriate result is shown.
+- Target grid clicks have one of the following results:
     - hit - grid turns red.
     - hit and sunk - grid turns red and the status message is updated indicates what ship was sunk.
     - miss - grid turns is yellow. 
     - an already marked grid does nothing.
-- Once all of either players ships are sunk.
+- Once all of either players ships are sunk:
     - Target clicks do nothing.
-    - A message displaying the win or loss for the player is displayed.
+    - A message displaying the win or loss for the player is shown.
     - The hidden enemy positions are revealed. 
 
 ## Additional enhancements
