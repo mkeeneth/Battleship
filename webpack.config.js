@@ -33,14 +33,12 @@ const config = {
   // Plugins
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html'
+      filename: "index.html",
+      template: "index.html"
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
-  // Reload Changes
-  watch: true,
   // Development Tools (Map Errors To Source File)
   devtool: "source-map",
   devServer: {

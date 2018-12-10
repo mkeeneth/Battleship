@@ -73,7 +73,7 @@ const gridPlacementListener = function(e) {
   }
 };
 
-const targetOceanListener = e => {
+export const targetOceanListener = e => {
   // get the position
   var x = e.target.dataset.x;
   var y = e.target.dataset.y;

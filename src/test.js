@@ -1,11 +1,11 @@
 // drive front end, click through happy path to completion
 import "babel-polyfill";
 import * as C from "./constants";
-const waitTime = 100;
+
+const waitTime = 80;
 const timeout = ms => new Promise(res => setTimeout(res, ms));
 
 export const happyPathTest = async () => {
-  // click stuff
   document.getElementById("battleships_list").children[0].click();
   await timeout(waitTime);
   document.getElementById("playergrid_1_1").click();

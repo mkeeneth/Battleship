@@ -1,4 +1,5 @@
 import * as C from "./constants";
+import { targetOceanListener } from "./events";
 
 export const getPlayerOceanContainer = () => document.getElementById(C.PLAYER_OCEAN_CONTAINER);
 export const getEnemyOceanContainer = () => document.getElementById(C.PLAYER_TARGET_CONTAINER);
@@ -28,8 +29,11 @@ export const playerShipPlacementComplete = ship => {
 };
 
 export const detectPlayerWin = () => {
-  if (document.querySelectorAll("#" + C.ENEMY_OCEAN_PREFIX + " [data-status='hit']").length > 14) {
-    getEnemyOceanContainer().removeEventListener("click", Battleship.targetOceanListener);
+  if (
+    document.querySelectorAll("[id^='" + C.ENEMY_OCEAN_PREFIX + "']" + "[data-status='hit']")
+      .length > 14
+  ) {
+    getEnemyOceanContainer().removeEventListener("click", targetOceanListener);
     updateStatus("You Won! All enemy ships have been sunk!");
     showEnemyPositions();
     return true;
@@ -39,8 +43,11 @@ export const detectPlayerWin = () => {
 };
 
 export const detectEnemyWin = () => {
-  if (document.querySelectorAll("#" + C.PLAYER_OCEAN_PREFIX + " [data-status='hit']").length > 14) {
-    getEnemyOceanContainer().removeEventListener("click", Battleship.targetOceanListener);
+  if (
+    document.querySelectorAll("[id^='" + C.PLAYER_OCEAN_PREFIX + "']" + "[data-status='hit']")
+      .length > 14
+  ) {
+    getEnemyOceanContainer().removeEventListener("click", targetOceanListener);
     updateStatus("You Lost! All your ships have been sunk!");
     showEnemyPositions();
     return true;
