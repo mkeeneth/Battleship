@@ -2,70 +2,7 @@
 <html>
   <head>
     <title>Battleship!</title>
-    <style>
-      body {
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-      }
-
-      #battleship_ship_placement {
-        padding-bottom: 30px;
-      }
-
-      #battleships_list > li,
-      .tile {
-        cursor: pointer;
-      }
-
-      #battleship_ocean_grid {
-        width: 320px;
-      }
-
-      #battleship_target_grid {
-        width: 320px;
-      }
-
-      #grids {
-        column-count: 2;
-        width: 800px;
-      }
-
-      .selected {
-        font-weight: bold;
-      }
-
-      .placed {
-        font-weight: bold;
-        text-decoration: line-through;
-      }
-
-      .tile {
-        width: 30px;
-        height: 30px;
-        border: 1px solid;
-        display: inline-block;
-        vertical-align: top;
-        text-align: center;
-        font-size: 22px;
-      }
-
-      .tile.hidden > span {
-        visibility: collapse;
-      }
-
-      #status {
-        height: 20px;
-        font-weight: bold;
-      }
-
-      [data-status="hit"] {
-        background-color: red;
-      }
-
-      [data-status="missed"] {
-        background-color: palegoldenrod;
-      }
-    </style>
+    <style></style>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
   </head>
 
@@ -94,5 +31,9 @@
       load js
       <script type="text/javascript" src="dist/bundle.js"></script>
     -->
+    <div id="footer">
+      Created by: <a href="https://github.com/mkeeneth">Matt Keeneth</a> /
+      <a href="https://github.com/mkeeneth/Battleship">Code</a>
+    </div>
   </body>
 </html>

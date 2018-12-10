@@ -1,6 +1,7 @@
 // battleship2 by Matt Keeneth
 import * as C from "./constants";
 import { renderGrid, shipPlacement } from "./render";
+import "./index.css";
 import { happyPathTest } from "./test";
 
 export const Battleship = () => {
