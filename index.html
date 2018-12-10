@@ -1,104 +1,98 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Battleship!</title>
     <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 14px;
-        }
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+      }
 
-        #battleship_ship_placement {
-            padding-bottom: 30px;
-        }
+      #battleship_ship_placement {
+        padding-bottom: 30px;
+      }
 
-        #battleships_list>li,
-        .tile {
-            cursor: pointer;
-        }
+      #battleships_list > li,
+      .tile {
+        cursor: pointer;
+      }
 
-        #battleship_ocean_grid {
-            width: 320px
-        }
+      #battleship_ocean_grid {
+        width: 320px;
+      }
 
-        #battleship_target_grid {
-            width: 320px
-        }
+      #battleship_target_grid {
+        width: 320px;
+      }
 
-        #grids {
-            column-count: 2;
-            width: 800px;
-        }
+      #grids {
+        column-count: 2;
+        width: 800px;
+      }
 
-        .selected {
-            font-weight: bold;
-        }
+      .selected {
+        font-weight: bold;
+      }
 
-        .placed {
-            font-weight: bold;
-            text-decoration: line-through;
-        }
+      .placed {
+        font-weight: bold;
+        text-decoration: line-through;
+      }
 
-        .tile {
-            width: 30px;
-            height: 30px;
-            border: 1px solid;
-            display: inline-block;
-            vertical-align: top;
-            text-align: center;
-            font-size: 22px;
-        }
+      .tile {
+        width: 30px;
+        height: 30px;
+        border: 1px solid;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-size: 22px;
+      }
 
-        .tile.hidden>span {
-            visibility: collapse;
-        }
+      .tile.hidden > span {
+        visibility: collapse;
+      }
 
-        #status {
-            height: 20px;
-            font-weight: bold;
-        }
+      #status {
+        height: 20px;
+        font-weight: bold;
+      }
 
-        [data-status="hit"] {
-            background-color: red;
-        }
+      [data-status="hit"] {
+        background-color: red;
+      }
 
-        [data-status="missed"] {
-            background-color: palegoldenrod;
-        }
+      [data-status="missed"] {
+        background-color: palegoldenrod;
+      }
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  </head>
 
-<body>
-    <h1>Welcome to Battleship!</h1>
-
+  <body>
+    <h1>Welcome to Battleship2!</h1>
+    <button id="launchtest">Launch Happy Path Test</button>
     <div id="battleship">
-        <div id="battleships">
+      <div id="battleships"></div>
+
+      <div>
+        <div id="battleship_ship_placement">
+          <p>Click on a ship to add it vertically your ocean.</p>
+          <ul id="battleships_list"></ul>
+          <p id="status"></p>
         </div>
-
-        <div>
-            <div id="battleship_ship_placement">
-                <p>Click on a ship to add it vertically your ocean.</p>
-                <ul id="battleships_list">
-                </ul>
-                <p id="status"></p>
-            </div>
-            <div id="grids">
-                <div>Your Ocean</div>
-                <div id="battleship_ocean_grid">
-                </div>
-                <div>Enemy Ocean</div>
-                <div id="battleship_target_grid">
-                </div>
-            </div>
+        <div id="grids">
+          <div>Your Ocean</div>
+          <div id="battleship_ocean_grid"></div>
+          <div>Enemy Ocean</div>
+          <div id="battleship_target_grid"></div>
         </div>
-
-
+      </div>
     </div>
 
-    <!-- load js -->
-    <script type="text/javascript" src="index.js"></script>
-</body>
-
+    <!--
+      load js
+      <script type="text/javascript" src="dist/bundle.js"></script>
+    -->
+  </body>
 </html>

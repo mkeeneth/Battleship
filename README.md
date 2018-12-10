@@ -1,38 +1,13 @@
-Battleship
-=======
+# Battleship
 
 ## About
 
-This is a player vs. computer JavaScript implementation of Battleship.  It has been written completely in JavaScript and uses no frameworks or libraries.
+This is a player vs. computer JavaScript implementation of Battleship. Modern Vanilla Javascript and uses no libraries.
 
-It was tested in the recent versions of Chrome, Firefox and Edge.  Internet Explorer is not supported.
+Utilized webpack for it's hot reloading development server, transpiling, bundling, and packaging.
 
 ## How to run
 
-Download, unzip and open index.html.
-
-## Test plan
-
-- All listed ships can be selected and placed.
-    - On click display an additional instruction in the status area indicating ship and length.
-    - Clicking the ship again or another ship in the list does nothing until the current ship is placed.
-    - If a ship is already placed and clicked again, display a message indicating that.
-- Once all ships are placed, the target area becomes clickable.
-- Target grid clicks have one of the following results:
-    - hit - grid turns red.
-    - hit and sunk - grid turns red and the status message is updated indicates what ship was sunk.
-    - miss - grid turns is yellow. 
-    - an already marked grid does nothing.
-- Once all of either players ships are sunk:
-    - Target clicks do nothing.
-    - A message displaying the win or loss for the player is shown.
-    - The hidden enemy positions are revealed. 
-
-## Additional enhancements
-
-- Add unit tests
-- Refactor Main Battleship object into other objects(grids/tile/etc)
-- Add horizontal placement support
-- Add random enemy ship placement 
-- Improve enemy targeting 
-- Add Polyfills to support IE (Or use a modern library to accomplish)
+- Clone repo
+- run "npm install"
+- run "npm start"
