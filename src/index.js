@@ -3,6 +3,7 @@ import * as C from "./constants";
 import { renderGrid, shipPlacement } from "./render";
 import "./index.css";
 import { happyPathTest } from "./test";
+import { getEnemyOceanContainer } from "./utils";
 
 export const Battleship = () => {
   // grab handles to render
@@ -13,6 +14,12 @@ export const Battleship = () => {
   // draw the board
   renderGrid(playerOcean, C.PLAYER_OCEAN_PREFIX, C.GRID_SIZE, C.UNTESTED);
   renderGrid(enemyOcean, C.ENEMY_OCEAN_PREFIX, C.GRID_SIZE, C.UNTESTED);
+
+  // hide spans on target grid
+  const enemyTiles = getEnemyOceanContainer().getElementsByClassName("tile");
+  for (var i = 0; i < enemyTiles.length; i++) {
+    enemyTiles[i].classList.add("hidden");
+  }
 
   // draw ship placement and bind events
   shipPlacement(C.SHIPS, shipsList);
