@@ -2,6 +2,8 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// Import the plugin:
+var DashboardPlugin = require("webpack-dashboard/plugin");
 
 // Webpack Configuration
 const config = {
@@ -38,7 +40,8 @@ const config = {
       template: "index.html"
     }),
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new DashboardPlugin()
   ],
   // Development Tools (Map Errors To Source File)
   devtool: "source-map",
